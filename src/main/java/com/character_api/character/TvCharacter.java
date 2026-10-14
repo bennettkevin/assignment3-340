@@ -1,9 +1,10 @@
 package com.character_api.character;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.NotBlank;
 
+@Entity
+@Table(name = "tv_characters")
 public class TvCharacter {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,15 +35,15 @@ public class TvCharacter {
       return name;
     }
 
-    public String description(){
+    public String getDescription(){
       return description;
     }
 
-    public String universe(){
+    public String getUniverse(){
       return universe;
     }
 
-    public String role(){
+    public String getRole(){
       return role;
     }
 
@@ -55,7 +56,7 @@ public class TvCharacter {
       this.description  = description;
     }
 
-    public void setUniverse(){
+    public void setUniverse(String universe){
       this.universe = universe;
     }
 }
