@@ -45,4 +45,5 @@ Content-type: application/json
 ## Deployed application 
 
 Link to [/api/characters](https://assignment3-340-bk5y.onrender.com/api/characters)
+
 Note: This is hosted on the free tier of render therefore there is a small delay when the server hasn't recieved a request in ~15 minutes. This delay is due to the server being started back up as it spins down after a period of inactivity and should only take ~1-1.5 minutes.
