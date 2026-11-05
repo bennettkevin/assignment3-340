@@ -8,7 +8,7 @@
     </form>
     <div class="container row d-flex justify-content-center">
         <#list characters as char>
-        <article class="card hero-card character-card">
+        <article class="card character-card ${(char.role?lower_case == 'hero') ? string('hero-card', 'villain-card')}">
           <a href="/character/${char.id?c}">
             <img class="card-img-top" src="${(char.imageUrl)!''}" alt="${char.name}"/>
           </a>

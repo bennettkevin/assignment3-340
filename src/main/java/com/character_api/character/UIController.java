@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller 
 @RequestMapping ("/character")
@@ -46,8 +47,9 @@ public class UIController {
     }
 
     @PostMapping("/new")
-    public String saveCharacter(TvCharacter character){
+    public String saveCharacter(TvCharacter character, RedirectAttributes redirectAttributes){
         TvCharacter savedCharacter = service.create(character);
+        redirectAttributes.addFlashAttribute("message", savedCharacter.getName() + " added successfully!");
         return "redirect:/character/" + savedCharacter.getId();
     }
 
@@ -60,8 +62,17 @@ public class UIController {
     }
 
     @PostMapping("/{id}/update")
-    public String updateCharacter(@PathVariable Long id, TvCharacter character){
+    public String updateCharacter(@PathVariable Long id, TvCharacter character, RedirectAttributes redirectAttributes){
         TvCharacter updatedCharacter = service.update(id, character);
+        redirectAttributes.addFlashAttribute("message", updatedCharacter.getName() + " updated successfully!");
         return "redirect:/character/" + updatedCharacter.getId();
+    }
+
+    @PostMapping("/{id}/delete")
+    public String deleteCharacter(@PathVariable Long id, RedirectAttributes redirectAttributes){
+        TvCharacter character = service.findById(id);
+        service.delete(id);
+        redirectAttributes.addFlashAttribute("message", character.getName() + " deleted successfully!");
+        return "redirect:/character/home";
     }
 }

@@ -1,3 +1,9 @@
+.alert {
+  background: #00438D;
+  padding: 12px 16px;
+  border-radius: 4px;
+}
+
 .character-card {
     max-width: 200px;
     margin: 10px;
