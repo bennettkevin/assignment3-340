@@ -10,7 +10,7 @@
         <#list characters as char>
         <article class="card hero-card character-card">
           <a href="/character/${char.id?c}">
-            <img class="card-img-top" src="./images/deadpool.jpeg"/>
+            <img class="card-img-top" src="${(char.imageUrl)!''}" alt="${char.name}"/>
           </a>
           <div class="card-body">
             <h3><a href="/character/${char.id?c}">${char.name}</a></h3>

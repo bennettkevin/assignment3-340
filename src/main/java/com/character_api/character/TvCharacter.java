@@ -22,6 +22,8 @@ public class TvCharacter {
     @NotBlank
     private String role;
 
+    private String imageUrl;
+
     // Constructor
     public TvCharacter(){
     }
@@ -47,6 +49,10 @@ public class TvCharacter {
       return role;
     }
 
+    public String getImageUrl(){
+      return imageUrl;
+    }
+
     // Setters 
     public void setName(String name){
       this.name = name;
@@ -58,5 +64,13 @@ public class TvCharacter {
 
     public void setUniverse(String universe){
       this.universe = universe;
+    }
+
+    public void setRole(String role){
+      this.role = role;
+    }
+
+    public void setImageUrl(String imageUrl){
+      this.imageUrl = imageUrl;
     }
 }

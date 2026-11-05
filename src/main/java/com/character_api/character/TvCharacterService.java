@@ -46,6 +46,8 @@ public class TvCharacterService {
     current.setName(updated.getName());
     current.setDescription(updated.getDescription());
     current.setUniverse(updated.getUniverse());
+    current.setRole(updated.getRole());
+    current.setImageUrl(updated.getImageUrl());
     return repository.save(current);
   }
 
