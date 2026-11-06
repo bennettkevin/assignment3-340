@@ -13,5 +13,5 @@ public interface TvCharacterRepository extends JpaRepository<TvCharacter, Long> 
     List<TvCharacter> findByRoleContainingIgnoreCase(String role);
     
     // Find by name and role
-    List<TvCharacter> findByNameContainingIgnoreCaseAndRole(String name, String role);
+    List<TvCharacter> findByNameContainingIgnoreCaseAndRoleContainingIgnoreCase(String name, String role);
 }

@@ -18,10 +18,10 @@ public class TvCharacterService {
 
   public List<TvCharacter> search(String name, String role){
     boolean hasName = name != null && !name.isBlank();
-    boolean hasRole = name != null && !name.isBlank();
+    boolean hasRole = role != null && !role.isBlank();
 
-    if (hasName && role != null){
-      return repository.findByNameContainingIgnoreCaseAndRole(name, role);
+    if (hasName && hasRole){
+      return repository.findByNameContainingIgnoreCaseAndRoleContainingIgnoreCase(name, role);
     }
     if (hasName) {
       return repository.findByNameContainingIgnoreCase(name);

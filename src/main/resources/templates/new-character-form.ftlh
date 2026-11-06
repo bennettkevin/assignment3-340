@@ -1,7 +1,7 @@
 <#import "layout.ftlh" as l>
 <@l.page title="New Character" active="new-character-form">
     
-    <form method="post" action="${formaction}" enctype="multipart/form-data" class="form">
+    <form method="post" action="${formaction}" enctype="multipart/form-data" class="form text-primary">
 
         <label for="name">Name:</label>
         <input class="form-control mb-3"type="text" id="name" name="name" value="${(char.name)! ''}" required> <br>

@@ -1,9 +1,9 @@
 <#import "layout.ftlh" as l>
 <@l.page title="About" active="about">
 
-    <div class="flex-column">
-        <h1>About</h1>
+    <div class="flex-column text-primary text-center">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeIckXqrLLxlKwjVNhI5uPooPxxWYwPcGWHFo9YM9w1Q&s=10" alt="Marvel Logo"/>
+        <h1>About This Character Database</h1>
         <h3>Why this theme?</h3>
         <p>The marvel universe is interesting to me. I enjoy the heroes and vilians and story telling
             that is done. I play a game called marvel Rivals which is mostly what the theme of this site

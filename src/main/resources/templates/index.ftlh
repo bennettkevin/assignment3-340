@@ -2,7 +2,10 @@
 <@l.page title="Home" active="index">
     <form method="get" action="/character/home">
         <div class="form-group row d-flex justify-content-center">
-            <input class="form-control" id="search-input" type="search" name="name" placeholder="Character Name...">
+            <Label for="searchInput" class="text-warning">Search by Name:</Label>
+            <input class="form-control mb-3" type="search" id="searchInput" name="name" placeholder="Character Name...">
+            <Label for="roleInput" class="text-warning">Filter by Role:</Label>
+            <input class="form-control mb-3" type="search" id="roleInput" name="role" placeholder="Character Role...">
             <button type="submit" class="btn btn-secondary" id="search-btn">Search</button>
         </div>
     </form>

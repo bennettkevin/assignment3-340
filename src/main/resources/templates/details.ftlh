@@ -2,7 +2,7 @@
 <@l.page title="Details" active="details">
     <div class="card">
         <div class="card ${(char.role?lower_case == 'hero') ? string('hero-card', 'villain-card')}">
-            <img class="card-img-top" src="${(char.imageUrl)! ''}" alt="${char.name}">
+            <img class="card-img-top details-img" src="${(char.imageUrl)! ''}" alt="${char.name}">
             <div class="card-body">
                 <h2 class="card-title">${char.name}</h2>
                 <p class="card-text">Role: <b>${char.role}</b> <br>

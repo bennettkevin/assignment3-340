@@ -28,14 +28,10 @@
     background-color: #A50000;
 }
 
-#search-input {
-    max-width: 300px;
-}
-
 #search-btn {
     max-width: 175px;
 }
 
-body {
+body, form {
     background-color: #504A4A;
 }
