@@ -42,8 +42,20 @@ Content-type: application/json
 }
 ```
 
+## Endpoint Reference 
+
+**base path** '/character'
+
+| Path | Description |
+|------|-------------|
+| /home | The homepage gallery of characters. |
+| /about | A page with details about the site. |
+| /{id} | A details page for each character. |
+| /add | A page to add a new character to the database. | 
+| /{id}/edit | A page to edit an existing character. |
+
 ## Deployed application 
 
-Link to [/api/characters](https://assignment3-340-bk5y.onrender.com/api/characters)
+Link to [/characters/home](https://assignment3-340-bk5y.onrender.com/character/home)
 
 Note: This is hosted on the free tier of render therefore there is a small delay when the server hasn't recieved a request in ~15 minutes. This delay is due to the server being started back up as it spins down after a period of inactivity and should only take ~1-1.5 minutes.
