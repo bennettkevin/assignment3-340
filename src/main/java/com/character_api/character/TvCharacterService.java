@@ -52,7 +52,6 @@ public class TvCharacterService {
   }
 
   public void delete(Long id){
-    findById(id);
     repository.deleteById(id);
   }
 }

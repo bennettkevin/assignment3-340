@@ -5,8 +5,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller 
@@ -20,8 +20,10 @@ public class UIController {
     }
 
     @GetMapping("/home")
-    public String index(Model model){
-        model.addAttribute("characters", service.findAll());
+    public String index(Model model, @RequestParam (required = false) String name, @RequestParam (required = false) String role){
+        model.addAttribute("characters", service.search(name, role));
+        model.addAttribute("name", name);
+        model.addAttribute("role", role);
         return "index";
     }
 
@@ -69,7 +71,7 @@ public class UIController {
         return "redirect:/character/" + updatedCharacter.getId();
     }
 
-    @DeleteMapping("/{id}/delete")
+    @PostMapping("/{id}/delete")
     public String deleteCharacter(@PathVariable Long id, RedirectAttributes redirectAttributes){
         TvCharacter character = service.findById(id);
         service.delete(id);

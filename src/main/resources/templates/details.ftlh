@@ -9,7 +9,9 @@
                     Universe: <b>${char.universe}</b> <br>
                     Description:${char.description}</p>
                 <a href="/character/${char.id}/edit" class="btn btn-primary">Edit</a>
-                <a href="/character/${char.id}/delete" class="btn btn-danger">Delete</a>
+                <form method="post" action="/character/${char.id}/delete" onsubmit="return confirm('Are you sure you want to delete this character?');" style="display:inline;">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
             </div>
         </div>
     </div>

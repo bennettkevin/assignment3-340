@@ -1,9 +1,9 @@
 <#import "layout.ftlh" as l>
 <@l.page title="Home" active="index">
-    <form>
+    <form method="get" action="/character/home">
         <div class="form-group row d-flex justify-content-center">
-            <input class="form-control" id="search-input" type="search" placeholder="Search a Marvel Character...">
-            <button class="btn btn-secondary" id="search-btn">Search</button>
+            <input class="form-control" id="search-input" type="search" name="name" placeholder="Character Name...">
+            <button type="submit" class="btn btn-secondary" id="search-btn">Search</button>
         </div>
     </form>
     <div class="container row d-flex justify-content-center">
